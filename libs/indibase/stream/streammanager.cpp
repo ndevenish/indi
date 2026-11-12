@@ -721,7 +721,7 @@ bool StreamManagerPrivate::startRecording()
     if(currentDevice->getDriverInterface() & INDI::DefaultDevice::CCD_INTERFACE)
     {
         /* get filter name for pattern substitution */
-        if (dynamic_cast<INDI::CCD * >(currentDevice)->CurrentFilterSlot != -1
+        if (dynamic_cast<INDI::CCD * >(currentDevice)->CurrentFilterSlot >= 1
                 && dynamic_cast<INDI::CCD * >(currentDevice)->CurrentFilterSlot <= static_cast<int>(dynamic_cast<INDI::CCD * >
                         (currentDevice)->FilterNames.size()))
         {

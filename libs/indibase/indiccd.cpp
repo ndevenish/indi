@@ -2130,7 +2130,7 @@ void CCD::addFITSKeywords(CCDChip * targetChip, std::vector<FITSRecord> &fitsKey
             break;
     }
 
-    if (CurrentFilterSlot != -1 && CurrentFilterSlot <= static_cast<int>(FilterNames.size()))
+    if (CurrentFilterSlot >= 1 && CurrentFilterSlot <= static_cast<int>(FilterNames.size()))
     {
         fitsKeywords.push_back({"FILTER", FilterNames.at(CurrentFilterSlot - 1).c_str(), "Filter"});
     }
